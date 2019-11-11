@@ -12,5 +12,5 @@
 	"repository": {},
 	"engines": {
 		"node": "4.2.x || 6.x || 8.x"
-	} 
+	}
 }
