@@ -6,6 +6,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="stylesheets/style.css">
+		<script src="scripts/story1_start.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	</head>
 
 	<body>
@@ -18,7 +20,7 @@
 						<div class="headline">
 							Balance
 						</div>
-						<div class="balancelist">
+						<div class="balancelist" id="balancelist">
 							<div class="income">1 €</div>
 							<div class="outcome">2 €</div>
 							<div class="income">1 €</div>
@@ -130,14 +132,14 @@
 							<div class="income">1 €</div>
 							<div class="outcome">2 €</div>
 						</div>
-						<div class="currentbalance">-1€</div>
+						<div class="currentbalance" id="endbalance">-1€</div>
 					</div>
 				</div>
 				<div class="rightcontent">
 					<div class="configlink"></div>
 					<div class="headline">
 					</div>
-					<div class="chart"></div>
+					<div class="chart" id="chart1"></div>
 				</div>
 			</div>
 
