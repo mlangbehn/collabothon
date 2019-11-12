@@ -8,6 +8,7 @@ body,html {
 	margin: 0 auto;
 	font-family: "IBM Plex Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #ffffff;
+	font-size: 10px;
 }
 
 a {
@@ -80,3 +81,63 @@ pre {
 	margin: 0;
 }
 
+
+
+
+
+
+.contentwrapper {
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	padding-top: 150px;
+	height: calc(100% - 200px);
+}
+
+.content {
+	padding:15px;
+	height: 100%;
+}
+
+.leftcontent {
+	width: 30%;
+	background-color: #dedede;
+	padding: 5px;
+	height: 100%;
+}
+
+.headline {
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3rem;
+	border-bottom: 3px solid #3b4b54;
+	margin-bottom: 15px;
+}
+
+.payments {
+	height: calc(100% - 115px);
+}
+
+.balancelist {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+	font-size: 2.3rem;
+}
+
+.income {
+	color: #000;
+}
+
+.outcome {
+	color: #f00;
+}
+
+.currentbalance {
+	margin-top: 15px;
+	border-top: 3px solid #3b4b54;
+	font-size: 3.5rem;
+	padding: 10px 0;
+	color: #000;
+}
