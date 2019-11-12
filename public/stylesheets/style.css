@@ -104,6 +104,11 @@ pre {
 	background-color: #dedede;
 	padding: 5px;
 	height: 100%;
+	float:left;
+}
+
+.rightcontent {
+	float:right;
 }
 
 .headline {
