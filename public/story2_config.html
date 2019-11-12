@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Super Awesome Team</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <script src="scripts/story2.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  </head>
+	<head>
+		<title>Super Awesome Team</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<script src="scripts/story2.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	</head>
 
-  <body>
-	<div class="contentwrapper">
-		<div class="content">
-			<div class="salarycontainer">
-				<h2 class="headline">Gehaltsangaben</h2>
-				<div class="salarydatecontainer">
-					<label for="salarydate12">Gehaltseingang (ca.): <select id="salarydate12" name="salarydate"></select></label>
+	<body>
+		<div class="contentwrapper">
+			<div class="content">
+				<div class="salarycontainer">
+					<h2 class="headline">Gehaltsangaben</h2>
+					<div class="salarydatecontainer">
+						<label for="salarydate12">Gehaltseingang (ca.): <select id="salarydate12" name="salarydate"></select></label>
+					</div>
+					<div class="salarylimit">
+						<label for="salarylimit">Gehaltslimit: <input type="text" id="salarylimit" name="salarylimit" /></label>
+					</div>
 				</div>
-				<div class="salarylimit">
-					<label for="salarylimit">Gehaltslimit: <input type="text" id="salarylimit" name="salarylimit" /></label>
+				<div class="etfcontainer">
+					<div class="headline">ETFs
+					</div>
+					<ul>
+						<li>
+							<label for="etf1">ETF1 <input type="checkbox" name="etf1" id="etf1" /></label>
+							<input type="text" name="etf1share" id="etf1share" value="0" /> 
+							<div class="etfdiagram" id="etfdiagram1"></div>
+						</li>
+						<li>
+							<label for="etf2">ETF2 <input type="checkbox" name="etf2" id="etf2" /></label> 
+							<input type="text" name="etf2share" id="etf2share" value="0"  />
+							<div class="etfdiagram" id="etfdiagram2"></div>
+						</li>
+						<li>
+							<label for="etf3">ETF3 <input type="checkbox" name="etf3" id="etf3" /></label> 
+							<input type="text" name="etf3share" id="etf3share" value="0"  />
+							<div class="etfdiagram" id="etfdiagram3"></div>
+						</li>
+						<li>
+							<label for="etf4">ETF4 <input type="checkbox" name="etf4" id="etf4" /></label> 
+							<input type="text" name="etf4share" id="etf4share" value="0" />
+							<div class="etfdiagram" id="etfdiagram4"></div>
+						</li>
+					</ul>
 				</div>
-			</div>
-			<div class="etfcontainer">
-				<div class="headline">ETFs
-				</div>
-				<ul>
-					<li>
-						<label for="etf1">ETF1 <input type="checkbox" name="etf1" id="etf1" /></label>
-						<input type="text" name="etf1share" id="etf1share" value="0" /> 
-						<div class="etfdiagram" id="etfdiagram1"></div>
-					</li>
-					<li>
-						<label for="etf2">ETF2 <input type="checkbox" name="etf2" id="etf2" /></label> 
-						<input type="text" name="etf2share" id="etf2share" value="0"  />
-						<div class="etfdiagram" id="etfdiagram2"></div>
-					</li>
-					<li>
-						<label for="etf3">ETF3 <input type="checkbox" name="etf3" id="etf3" /></label> 
-						<input type="text" name="etf3share" id="etf3share" value="0"  />
-						<div class="etfdiagram" id="etfdiagram3"></div>
-					</li>
-					<li>
-						<label for="etf4">ETF4 <input type="checkbox" name="etf4" id="etf4" /></label> 
-						<input type="text" name="etf4share" id="etf4share" value="0" />
-						<div class="etfdiagram" id="etfdiagram4"></div>
-					</li>
-				</ul>
 			</div>
 		</div>
-	</div>
-  </body>
+	</body>
 </html>
