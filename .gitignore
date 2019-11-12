@@ -24,5 +24,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Ignore Node files
+node_modules/
+package-lock.json
+
 # From upstream
 launchConfigurations/
