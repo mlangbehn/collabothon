@@ -31,9 +31,9 @@ function prepareData(data) {
 	let endSaldo = 0;
 	for(let i = 0; i < data.length; i++) {
 		/* append data for google charts */
-		chartData1.push([data[i].date, data[i].withoutinterest]);
+		chartData1.push([data[i].date, data[i].checking_acoount, data[i].brokerage_account]);
 
-		currentBalance = data[i].withoutinterest;
+		currentBalance = data[i].checking_acoount;
 		
 		if (currentBalance === lastBalance) continue;
 
@@ -67,8 +67,9 @@ function drawChart1() { drawAxisTickColors(chartData1, chart1Container); }
 
 function drawAxisTickColors(chartData, elem) {
       var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Month');
-      data.addColumn('number', 'Price');
+      data.addColumn('string', 'Date');
+      data.addColumn('number', 'Account (checking)');
+      data.addColumn('number', 'Account (broker)');
 
       data.addRows(chartData);
 
@@ -103,9 +104,9 @@ function drawAxisTickColors(chartData, elem) {
             bold: true
           }
         },
-        colors: ['#a52714'],
-        width: 300,
-        height: 80,
+        colors: ['#000', '#0FF'],
+        width: 1550,
+        height: 350,
         legend: null
       };
       var chart = new google.visualization.LineChart(elem);
