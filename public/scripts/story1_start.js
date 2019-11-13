@@ -105,7 +105,7 @@ function drawAxisTickColors(chartData, elem) {
           }
         },
         colors: ['#000', '#0FF'],
-        width: 1550,
+        width: 650,
         height: 350,
         legend: null
       };

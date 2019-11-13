@@ -132,11 +132,30 @@ pre {
 }
 
 .income {
+	display: block;
 	color: #000;
+	padding: 5px;
 }
 
 .outcome {
 	color: #f00;
+	display: block;
+	padding: 5px;
+}
+
+.odd {
+	background-color: #FFF;
+}
+
+.balancedate {
+	display: inline-block;
+	width: 50%;
+}
+
+.balancevalue {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
 }
 
 .currentbalance {
