@@ -1,31 +1,84 @@
-let chartData = [];
+const url = 'data/balance.txt';
 
-for (let i = 1; i < 366; i++) {
-	if (Math.floor(Math.random() * 111) % 2) {
-		let date = new Date(Date.now() - ((365-i)*60*60*24*1000));
-		let curdate = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
-		chartData.push([curdate, i*Math.random() * 3 / 15]);
-	}
-}
+const bla = fetch(url)
+	.then((resp) => resp.json()) // Transform the data into json
+	.then(function (data) { prepareData(data);});
 
 let chart1Container;
+let balanceContainter;
+let endBalanceContainter;
+let chartData1 = [];
+let balances = [];
+let lastBalance = 0;
+let currentBalance = 0;
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
     chart1Container = document.getElementById('chart1');
-console.log(chart1Container);
+    balanceContainter = document.getElementById('balancelist');
+    endBalanceContainter = document.getElementById('endbalance');
+    balanceContainter.innerHTML = '';
 	google.charts.load('current', {packages: ['corechart', 'line']});
-	google.charts.setOnLoadCallback(drawChart1);
+	//google.charts.setOnLoadCallback(drawChart1);
 
 });
 
+function prepareData(data) {
+	let currentBalanceContainer;
+	let className;
+	let saldo;
+	let endSaldo = 0;
+	let y = 0;
+	for(let i = 0; i < data.length; i++) {
+		/* append data for google charts */
+		//chartData1.push([data[i].date, data[i].checking_acoount, data[i].brokerage_account]);
+		chartData1.push([data[i].date, data[i].checking_acoount]);
 
-function drawChart1() { drawAxisTickColors(chartData, chart1Container);}
+		currentBalance = data[i].checking_acoount;
+		
+		if (currentBalance === lastBalance) continue;
+
+		/* update content */
+		if (currentBalance > lastBalance) {
+			className = 'income';
+			saldo = currentBalance - lastBalance;
+			endSaldo += saldo;
+		} else {
+			className = 'outcome';
+			saldo =  lastBalance - currentBalance;
+			endSaldo -= saldo;
+		}
+		if (y % 2 === 0) {
+			className += " odd";
+		} else {
+			className += " even";
+		}
+		y++;
+		lastBalance = currentBalance;
+
+		currentBalanceContainer = document.createElement('div');
+		currentBalanceContainer.className = className;
+		currentBalanceMonth = document.createElement('div');
+		currentBalanceMonth.innerHTML = data[i].date;
+		currentBalanceMonth.className = "balancedate";
+		currentBalanceValue = document.createElement('div');
+		currentBalanceValue.innerHTML = saldo + " €";
+		currentBalanceValue.className = "balancevalue";
+		currentBalanceContainer.appendChild(currentBalanceMonth);
+		currentBalanceContainer.appendChild(currentBalanceValue);
+		balanceContainter.appendChild(currentBalanceContainer);
+	}
+	endBalanceContainter.innerHTML = endSaldo + " €";
+	drawChart1();
+}
+
+function drawChart1() { drawAxisTickColors(chartData1, chart1Container); }
 
 function drawAxisTickColors(chartData, elem) {
       var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Month');
-      data.addColumn('number', 'Price');
+      data.addColumn('string', 'Date');
+      data.addColumn('number', 'Account (checking)');
+      //data.addColumn('number', 'Account (broker)');
 
       data.addRows(chartData);
 
@@ -48,7 +101,7 @@ function drawAxisTickColors(chartData, elem) {
           }
         },
         vAxis: {
-          title: 'Price',
+          title: 'Balance',
           textStyle: {
             color: '#1a237e',
             fontSize: 10,
@@ -60,9 +113,9 @@ function drawAxisTickColors(chartData, elem) {
             bold: true
           }
         },
-        colors: ['#a52714'],
-        width: 300,
-        height: 80,
+        colors: ['#000', '#0FF'],
+        width: 750,
+        height: 350,
         legend: null
       };
       var chart = new google.visualization.LineChart(elem);

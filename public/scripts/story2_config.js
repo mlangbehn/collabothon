@@ -1,108 +1,116 @@
 	const chartData1 = [
         ['Jan 18', 36.34],
-        ['Feb 18', 46.79],
-        ['Mär 18', 73.34],
-        ['Apr 18', 97.14],
-        ['Mai 18', 20.23],
-        ['Jun 18', 16.13],
-        ['Jul 18', 89.34],
-        ['Aug 18', 56.49],
-        ['Sep 18', 37.34],
-        ['Okt 18', 70.56],
-        ['Nov 18', 43.34],
-        ['Den 18', 11.00],
-        ['Jan 19', 66.66],
-        ['Feb 19', 89.34],
-        ['Mär 19', 12.34],
-        ['Apr 19', 54.34],
-        ['Mai 19', 34.34],
-        ['Jun 19', 90.34],
-        ['Jul 19', 56.34],
-        ['Aug 19', 89.34],
-        ['Sep 19', 45.34]
+        ['Feb 18', 36.79],
+        ['Mär 18', 37.34],
+        ['Apr 18', 37.14],
+        ['Mai 18', 37.23],
+        ['Jun 18', 37.13],
+        ['Jul 18', 37.34],
+        ['Aug 18', 22.49],
+        ['Sep 18', 23.34],
+        ['Okt 18', 24.56],
+        ['Nov 18', 25.34],
+        ['Den 18', 26.00],
+        ['Jan 19', 27.66],
+        ['Feb 19', 28.34],
+        ['Mär 19', 29.34],
+        ['Apr 19', 30.34],
+        ['Mai 19', 31.34],
+        ['Jun 19', 32.34],
+        ['Jul 19', 33.34],
+        ['Aug 19', 34.34],
+        ['Sep 19', 35.34]
         ];
 	const chartData2 = [
-        ['Jan 18', 34.34],
-        ['Feb 18', 45.34],
-        ['Mär 18', 36.34],
-        ['Apr 18', 67.34],
-        ['Mai 18', 34.89],
-        ['Jun 18', 38.34],
+        ['Jan 18', 24.34],
+        ['Feb 18', 25.34],
+        ['Mär 18', 26.34],
+        ['Apr 18', 27.34],
+        ['Mai 18', 27.89],
+        ['Jun 18', 28.34],
         ['Jul 18', 12.34],
-        ['Aug 18', 56.34],
-        ['Sep 18', 37.34],
-        ['Okt 18', 56.34],
-        ['Nov 18', 43.34],
-        ['Den 18', 11.34],
-        ['Jan 19', 45.34],
-        ['Feb 19', 78.34],
-        ['Mär 19', 67.34],
-        ['Apr 19', 54.34],
-        ['Mai 19', 36.34],
-        ['Jun 19', 90.34],
-        ['Jul 19', 12.34],
-        ['Aug 19', 15.34],
-        ['Sep 19', 36.34]
+        ['Aug 18', 13.34],
+        ['Sep 18', 14.34],
+        ['Okt 18', 16.34],
+        ['Nov 18', 17.34],
+        ['Den 18', 18.34],
+        ['Jan 19', 19.34],
+        ['Feb 19', 20.64],
+        ['Mär 19', 21.94],
+        ['Apr 19', 22.34],
+        ['Mai 19', 23.34],
+        ['Jun 19', 24.34],
+        ['Jul 19', 25.34],
+        ['Aug 19', 26.34],
+        ['Sep 19', 27.34]
         ];
 	const chartData3 = [
-        ['Jan 18', 34.34],
-        ['Feb 18', 35.34],
-        ['Mär 18', 36.34],
-        ['Apr 18', 23.34],
-        ['Mai 18', 67.34],
-        ['Jun 18', 38.34],
-        ['Jul 18', 16.34],
-        ['Aug 18', 66.34],
-        ['Sep 18', 37.34],
-        ['Okt 18', 99.34],
-        ['Nov 18', 43.34],
-        ['Den 18', 11.34],
-        ['Jan 19', 89.34],
-        ['Feb 19', 89.34],
-        ['Mär 19', 67.34],
-        ['Apr 19', 54.34],
-        ['Mai 19', 44.34],
-        ['Jun 19', 90.34],
-        ['Jul 19', 33.34],
-        ['Aug 19', 23.34],
-        ['Sep 19', 23.34]
+        ['Jan 18', 134.34],
+        ['Feb 18', 135.34],
+        ['Mär 18', 136.34],
+        ['Apr 18', 123.34],
+        ['Mai 18', 124.34],
+        ['Jun 18', 125.34],
+        ['Jul 18', 125.94],
+        ['Aug 18', 126.34],
+        ['Sep 18', 127.34],
+        ['Okt 18', 129.34],
+        ['Nov 18', 130.34],
+        ['Den 18', 132.34],
+        ['Jan 19', 133.34],
+        ['Feb 19', 134.34],
+        ['Mär 19', 135.34],
+        ['Apr 19', 136.34],
+        ['Mai 19', 137.34],
+        ['Jun 19', 138.34],
+        ['Jul 19', 139.34],
+        ['Aug 19', 140.34],
+        ['Sep 19', 142.34]
         ];
 	const chartData4 = [
-        ['Jan 18', 34.34],
-        ['Feb 18', 35.34],
-        ['Mär 18', 36.34],
-        ['Apr 18', 23.34],
-        ['Mai 18', 67.34],
-        ['Jun 18', 76.34],
-        ['Jul 18', 16.34],
-        ['Aug 18', 88.34],
-        ['Sep 18', 37.34],
-        ['Okt 18', 39.34],
-        ['Nov 18', 66.34],
+        ['Jan 18', 4.34],
+        ['Feb 18', 5.34],
+        ['Mär 18', 6.34],
+        ['Apr 18', 7.34],
+        ['Mai 18', 8.34],
+        ['Jun 18', 10.34],
+        ['Jul 18', 3.34],
+        ['Aug 18', 4.34],
+        ['Sep 18', 6.34],
+        ['Okt 18', 8.34],
+        ['Nov 18', 9.34],
         ['Den 18', 11.34],
-        ['Jan 19', 45.34],
-        ['Feb 19', 89.34],
-        ['Mär 19', 67.34],
-        ['Apr 19', 90.34],
-        ['Mai 19', 36.34],
-        ['Jun 19', 90.34],
-        ['Jul 19', 90.34],
+        ['Jan 19', 13.34],
+        ['Feb 19', 13.34],
+        ['Mär 19', 13.34],
+        ['Apr 19', 14.34],
+        ['Mai 19', 15.34],
+        ['Jun 19', 15.34],
+        ['Jul 19', 15.34],
         ['Aug 19', 15.34],
-        ['Sep 19', 50.34]
+        ['Sep 19', 16.34]
         ];
 
 let chart1Container;
 let chart2Container;
 let chart3Container;
 let chart4Container;
+let checketf1;
+let checketf2;
+let checketf3;
+let checketf4;
+let inputetf1share;
+let inputetf2share;
+let inputetf3share;
+let inputetf4share;
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
-	const selectsalarydate = document.getElementById('salarydate12');
-	const inputetf1share = document.getElementById('etf1share');
-	const inputetf2share = document.getElementById('etf2share');
-	const inputetf3share = document.getElementById('etf3share');
-	const inputetf4share = document.getElementById('etf4share');
+	const selectsalarydate = document.getElementById('salarydate');
+	 inputetf1share = document.getElementById('etf1share');
+	inputetf2share = document.getElementById('etf2share');
+	inputetf3share = document.getElementById('etf3share');
+	inputetf4share = document.getElementById('etf4share');
 
 	if (selectsalarydate) {
 		for (let i = 1; i < 32; i++) {
@@ -113,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		}
 	}
 
-	const checketf1 = document.getElementById('etf1');
+	checketf1 = document.getElementById('etf1');
 
 	checketf1.addEventListener('change', (e) => {
 		inputetf1share.value = 100;
@@ -123,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		checkETFS(inputetf1share);
 	});
 
-	const checketf2 = document.getElementById('etf2');
+	checketf2 = document.getElementById('etf2');
 	checketf2.addEventListener('change', (e) => {
 		inputetf2share.value = 100;
 		if (!checketf2.checked) {
@@ -132,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		checkETFS(inputetf2share);
 	});
 
-	const checketf3 = document.getElementById('etf3');
+	checketf3 = document.getElementById('etf3');
 	checketf3.addEventListener('change', (e) => {
 		inputetf3share.value = 100;
 		if (!checketf3.checked) {
@@ -141,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		checkETFS(inputetf3share);
 	});
 
-	const checketf4 = document.getElementById('etf4');
+	checketf4 = document.getElementById('etf4');
 	checketf4.addEventListener('change', (e) => {
 		inputetf4share.value = 100;
 		if (!checketf4.checked) {
@@ -237,8 +245,8 @@ function drawAxisTickColors(chartData, elem) {
           }
         },
         colors: ['#a52714'],
-        width: 300,
-        height: 80,
+        width: 700,
+        height: 200,
         legend: null
       };
       var chart = new google.visualization.LineChart(elem);
