@@ -13,6 +13,8 @@ let chartData1 = [];
 let balances = [];
 let lastBalance = 0;
 let currentBalance = 0;
+let lastGiro = 0;
+let currentGiro = 0;
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -29,6 +31,7 @@ function prepareData(data) {
 	let className;
 	let saldo;
 	let endSaldo = 0;
+	let saldoGiro = 0;
 	let y = 0;
 
 	balanceHeadContainer = document.createElement('div');
@@ -39,11 +42,11 @@ function prepareData(data) {
 	balanceHeadContainer.appendChild(balanceHeadDate);
 	balanceHeadValue = document.createElement('div');
 	balanceHeadValue.className = "balanceheadline balanceheadvalue";
-	balanceHeadValue.innerHTML = "In/out come";
+	balanceHeadValue.innerHTML = "Giro";
 	balanceHeadContainer.appendChild(balanceHeadValue);
 	giroHeadValue = document.createElement('div');
 	giroHeadValue.className = "balanceheadline giroheadvalue";
-	giroHeadValue.innerHTML = "Giro balance";
+	giroHeadValue.innerHTML = "Brokerage";
 	balanceHeadContainer.appendChild(giroHeadValue);
 	balanceContainter.appendChild(balanceHeadContainer);
 	
@@ -52,6 +55,7 @@ function prepareData(data) {
 		chartData1.push([data[i].date, data[i].checking_acoount, data[i].brokerage_account]);
 
 		currentBalance = data[i].checking_acoount;
+		currentGiro = data[i].brokerage_account;
 		
 		//if (currentBalance === lastBalance) continue;
 
@@ -65,6 +69,13 @@ function prepareData(data) {
 			saldo =  lastBalance - currentBalance;
 			endSaldo -= saldo;
 		}
+		
+		if (currentGiro > lastGiro) {
+			saldoGiro = currentGiro - lastGiro;
+		} else {
+			saldoGiro = lastGiro- currentGiro;
+		}
+		
 		if (y % 2 === 0) {
 			className += " odd";
 		} else {
@@ -72,6 +83,7 @@ function prepareData(data) {
 		}
 		y++;
 		lastBalance = currentBalance;		
+		lastGiro = currentGiro;		
 
 		currentBalanceContainer = document.createElement('div');
 		currentBalanceContainer.className = className;
@@ -82,7 +94,7 @@ function prepareData(data) {
 		currentBalanceValue.innerHTML = saldo + " €";
 		currentBalanceValue.className = "balancevalue";
 		currentGiroValue = document.createElement('div');
-		currentGiroValue.innerHTML = data[i].brokerage_account + " €";
+		currentGiroValue.innerHTML = saldoGiro + " €";
 		currentGiroValue.className = "girovalue";
 		currentBalanceContainer.appendChild(currentBalanceMonth);
 		currentBalanceContainer.appendChild(currentBalanceValue);
@@ -134,7 +146,7 @@ function drawAxisTickColors(chartData, elem) {
             bold: true
           }
         },
-        colors: ['#000', '#0FF'],
+        colors: ['#000', '#0F0'],
         width: 1150,
         height: 550,
         legend: null
