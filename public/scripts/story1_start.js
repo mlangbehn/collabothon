@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     endBalanceContainter = document.getElementById('endbalance');
     balanceContainter.innerHTML = '';
 	google.charts.load('current', {packages: ['corechart', 'line']});
-	google.charts.setOnLoadCallback(drawChart1);
+	//google.charts.setOnLoadCallback(drawChart1);
 
 });
 
@@ -29,9 +29,11 @@ function prepareData(data) {
 	let className;
 	let saldo;
 	let endSaldo = 0;
+	let y = 0;
 	for(let i = 0; i < data.length; i++) {
 		/* append data for google charts */
-		chartData1.push([data[i].date, data[i].checking_acoount, data[i].brokerage_account]);
+		//chartData1.push([data[i].date, data[i].checking_acoount, data[i].brokerage_account]);
+		chartData1.push([data[i].date, data[i].checking_acoount]);
 
 		currentBalance = data[i].checking_acoount;
 		
@@ -47,6 +49,12 @@ function prepareData(data) {
 			saldo =  lastBalance - currentBalance;
 			endSaldo -= saldo;
 		}
+		if (y % 2 === 0) {
+			className += " odd";
+		} else {
+			className += " even";
+		}
+		y++;
 
 		lastBalance = currentBalance;
 
@@ -54,13 +62,16 @@ function prepareData(data) {
 		currentBalanceContainer.className = className;
 		currentBalanceMonth = document.createElement('div');
 		currentBalanceMonth.innerHTML = data[i].date;
+		currentBalanceMonth.className = "balancedate";
 		currentBalanceValue = document.createElement('div');
 		currentBalanceValue.innerHTML = saldo;
+		currentBalanceValue.className = "balancevalue";
 		currentBalanceContainer.appendChild(currentBalanceMonth);
 		currentBalanceContainer.appendChild(currentBalanceValue);
 		balanceContainter.appendChild(currentBalanceContainer);
 	}
 	endBalanceContainter.innerHTML = endSaldo;
+	drawChart1();
 }
 
 function drawChart1() { drawAxisTickColors(chartData1, chart1Container); }
@@ -69,7 +80,7 @@ function drawAxisTickColors(chartData, elem) {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Date');
       data.addColumn('number', 'Account (checking)');
-      data.addColumn('number', 'Account (broker)');
+      //data.addColumn('number', 'Account (broker)');
 
       data.addRows(chartData);
 
@@ -92,7 +103,7 @@ function drawAxisTickColors(chartData, elem) {
           }
         },
         vAxis: {
-          title: 'Price',
+          title: 'Balance',
           textStyle: {
             color: '#1a237e',
             fontSize: 10,
@@ -105,7 +116,7 @@ function drawAxisTickColors(chartData, elem) {
           }
         },
         colors: ['#000', '#0FF'],
-        width: 650,
+        width: 750,
         height: 350,
         legend: null
       };

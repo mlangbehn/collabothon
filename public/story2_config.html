@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="scripts/story2_config.js"></script>
 	<style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -21,6 +24,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 				<a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
 				<a href="story1_start.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">User without our solution</a>
 				<a href="story2_start.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Prospective user</a>
+				<a href="story3_start.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">User with our solution</a>
+
 			</div>
 
 			<!-- Navbar on small screens -->
@@ -38,36 +43,42 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		<div class="contentwrapper">
 			<div class="content">
 				<div class="salarycontainer">
-					<h2 class="headline">Gehaltsangaben</h2>
+					<h2 class="headline">Salary</h2>
 					<div class="salarydatecontainer">
-						<label for="salarydate12">Gehaltseingang (ca.): <select id="salarydate12" name="salarydate"></select></label>
+						<label class="salaryinfolabel" for="salarydate">Salary pay day:</label>
+						<select id="salarydate" name="salarydate"></select>
 					</div>
 					<div class="salarylimit">
-						<label for="salarylimit">Gehaltslimit: <input type="text" id="salarylimit" name="salarylimit" /></label>
+						<label class="salaryinfolabel" for="salarylimit">salary limit (usesd for stocks):</label>
+						<input type="text" id="salarylimit" name="salarylimit" />
 					</div>
 				</div>
 				<div class="etfcontainer">
-					<div class="headline">ETFs
+					<div class="headline">Stocks
 					</div>
-					<ul>
-						<li>
-							<label for="etf1">ETF1 <input type="checkbox" name="etf1" id="etf1" /></label>
-							<input type="text" name="etf1share" id="etf1share" value="0" /> 
+					<ul class="stocklist">
+						<li class="stockitem">
+							<label class="stockname" for="etf1">hausInvest</label>
+							<input class="stockchecked" type="checkbox" name="etf1" id="etf1" />
+							<input class="stockvalue" type="text" name="etf1share" id="etf1share" value="0" /> 
 							<div class="etfdiagram" id="etfdiagram1"></div>
 						</li>
-						<li>
-							<label for="etf2">ETF2 <input type="checkbox" name="etf2" id="etf2" /></label> 
-							<input type="text" name="etf2share" id="etf2share" value="0"  />
+						<li class="stockitem">
+							<label class="stockname" for="etf2">MSCI World</label>
+							<input class="stockchecked" type="checkbox" name="etf2" id="etf2" /> 
+							<input class="stockvalue" type="text" name="etf2share" id="etf2share" value="0"  />
 							<div class="etfdiagram" id="etfdiagram2"></div>
 						</li>
-						<li>
-							<label for="etf3">ETF3 <input type="checkbox" name="etf3" id="etf3" /></label> 
-							<input type="text" name="etf3share" id="etf3share" value="0"  />
+						<li class="stockitem">
+							<label class="stockname" for="etf3">S&and;P500</label>
+							<input class="stockchecked" type="checkbox" name="etf3" id="etf3" /> 
+							<input class="stockvalue" type="text" name="etf3share" id="etf3share" value="0"  />
 							<div class="etfdiagram" id="etfdiagram3"></div>
 						</li>
-						<li>
-							<label for="etf4">ETF4 <input type="checkbox" name="etf4" id="etf4" /></label> 
-							<input type="text" name="etf4share" id="etf4share" value="0" />
+						<li class="stockitem">
+							<label class="stockname" for="etf4">ECBI</label>
+							<input class="stockchecked" type="checkbox" name="etf4" id="etf4" />
+							<input class="stockvalue" type="text" name="etf4share" id="etf4share" value="0" />
 							<div class="etfdiagram" id="etfdiagram4"></div>
 						</li>
 					</ul>
@@ -80,21 +91,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 		</div>
 
 		<!-- Footer -->
+		<!--
 		<footer class="w3-container w3-padding-64 w3-center w3-opacity">
 			<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 		</footer>
-
-		<script>
-			// Used to toggle the menu on small screens when clicking on the menu button
-			function myFunction() {
-				var x = document.getElementById("navDemo");
-				if (x.className.indexOf("w3-show") == -1) {
-					x.className += " w3-show";
-				} else {
-					x.className = x.className.replace(" w3-show", "");
-				}
-			}
-		</script>
+		-->
 
 	</body>
 </html>
